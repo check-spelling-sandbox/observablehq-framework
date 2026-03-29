@@ -43,7 +43,7 @@ hash
 
 [Source](https://github.com/observablehq/framework/blob/main/src/client/stdlib/generators/queue.js) · Returns an async generator that immediately invokes the specified *initialize* function, being passed a *change* callback function, and yields the passed value whenever *change* is called. The *initialize* function may optionally return a *dispose* function that will be called when the generator is terminated.
 
-This is identical to `Generators.observe` except that if *change* is called multiple times before the consumer has a chance to process the yielded result, values will not be dropped; use this if you require that the consumer not miss a yielded value.
+This is identical to `Generators.observe` except that if *change* is called multiple times before the consumer has a chance to process the yielded result, values will not be dropped; use this if you require that the consumer not miss yielded values.
 
 ```js run=false
 const hash = Generators.queue((change) => {
